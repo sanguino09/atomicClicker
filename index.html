@@ -10,22 +10,31 @@
       href="https://fonts.cdnfonts.com/css/goudy-old-style"
       rel="stylesheet"
     />
-    <title>Atomic Clicker</title>
+    <title>Periodic Evolution</title>
   </head>
   <body>
+    <div class="elementLetter">Hydrogen</div>
     <div class="titleDiv">
-      <div class="title">Atom Clicker</div>
+      <div class="title">Periodic Evolution</div>
     </div>
+
     <div class="gameDiv">
       <div onclick="clickFunction()" class="stage">
         <div class="core2">
-          <span hidden id="trabant"></span>
+          <span hidden id="trabant" class="electron1"></span>
+          <span hidden id="trabant" class="electron2"></span>
+          <span hidden id="trabant" class="electron3"></span>
+          <span hidden id="trabant" class="electron4"></span>
+          <span hidden id="trabant" class="electron5"></span>
         </div>
       </div>
       <div class="infoDiv">
         <div class="gameItems">
-          <div onclick="addElectron()" class="itemButton atoms">
-            +1 electron <span class="electronPrice">(20c)</span>
+          <div onclick="addElectron2()" class="itemButton atoms2">
+            +1 electron (100c)
+          </div>
+          <div onclick="addElectron1()" class="itemButton atoms1">
+            +1 electron (20c)
           </div>
           <div onclick="autoClick()" class="itemButton auto">
             Auto Click <span class="electronPrice">(1000c)</span>

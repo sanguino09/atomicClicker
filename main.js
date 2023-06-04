@@ -1,12 +1,11 @@
 let click = 0;
-let electron1 = document.getElementsByClassName("electron1");
-let electron2 = document.getElementsByClassName("electron2");
-let electron3 = document.getElementsByClassName("electron3");
-let neutron1 = document.getElementsByClassName("neutron1");
-let neutron2 = document.getElementsByClassName("neutron2");
-let neutron3 = document.getElementsByClassName("neutron3");
-let neutron4 = document.getElementsByClassName("neutron4");
-let neutron5 = document.getElementsByClassName("neutron5");
+let electron1 = document.querySelector(".electron1");
+let electron2 = document.querySelector(".electron2");
+let electron3 = document.querySelector(".electron4");
+let electron4 = document.querySelector(".electron4");
+let electron5 = document.querySelector(".electron5");
+let addElectron1Button = document.querySelector(".atoms1");
+let addElectron2Button = document.querySelector(".atoms2");
 
 function clickFunction() {
   click += 1;
@@ -14,14 +13,24 @@ function clickFunction() {
   document.getElementById("clickNumber").innerHTML = click.toString();
 }
 
-function addElectron() {
+function addElectron1() {
   if (click >= 20) {
-    document.getElementById("trabant").removeAttribute("hidden");
+    electron1.removeAttribute("hidden");
     click = click - 20;
     document.getElementById("clickNumber").innerHTML = click.toString();
-    console.log("add electron");
+    console.log("add electron 1");
+    addElectron1Button.style.display = 'none';
+    addElectron2Button.style.display = 'block';
   }
 }
+function addElectron2() {
+    if (click >= 100) {
+      electron2.removeAttribute("hidden");
+      click = click - 100;
+      document.getElementById("clickNumber").innerHTML = click.toString();
+      console.log("add electron 2");
+    }
+  }
 /*
 function autoClick() {
   if (click >= 1000) {
