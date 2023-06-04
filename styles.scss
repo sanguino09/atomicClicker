@@ -64,6 +64,7 @@ body {
 .itemButton {
   margin: 1vw;
   box-shadow: 6px 6px 10px #0a2342;
+  border-radius: 10px;
 }
 
 @media (max-width: 767px) {
@@ -149,18 +150,18 @@ body {
     0 0 5rem rgba(white, .8);
 }
 
-.core2,
-.trabant {transform-style: preserve-3d;}
+.core2 {transform-style: preserve-3d;}
 
 // each trabant is actually a long rectangle
 // only the :before elemenet is visible
-.trabant {
+#trabant {
   position:absolute;
   top:50%;
   left:-16%;
   right:-16%;
   margin-top:-5%;
   padding-bottom:10%;
+  transform-style: preserve-3d;
   
   &:before {
     content:'';
@@ -186,8 +187,8 @@ body {
 // one animation for each trabant 
 // with custom angle and timing 
 // + same timing for :before element
-@for $i from 1 through 5 {
-  .trabant:nth-child(#{$i}) {
+@for $i from 1 through 1 {
+  #trabant:nth-child(#{$i}) {
     $time:1.5 - ((random(30) - 30) / 10) * 1s;
     $delay:$i* (-2s);
     animation:rotating-#{$i} $time $delay linear infinite;
