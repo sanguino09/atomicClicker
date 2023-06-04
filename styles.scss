@@ -92,6 +92,7 @@ body {
 
 @media (max-width: 767px){
   .otherStats{
+    display: flex;
     flex-direction: column;
   }
   body{
