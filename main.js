@@ -11,5 +11,6 @@ let clickCount = document.getElementsByClassName("clickNumber");
 
 function clickFunction(){
     click += 1;
-    console.log('click');
+    console.log(click);
+    clickCount.innerHTML = click.toString();
 }

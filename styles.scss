@@ -1,0 +1,201 @@
+$yellow:#FF9B00;
+
+
+@import url("https://fonts.cdnfonts.com/css/goudy-old-style");
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Goudy Old Style", sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  font-style: normal;
+  text-align: center;
+  background-color: #0a2342;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide scrollbars */
+}
+.titleDiv {
+  height: 5%;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background-color: none;
+}
+.gameDiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gameScreen {
+  height: 70%;
+  width: 80%;
+  background-color: aliceblue;
+  border-radius: 20px;
+  border-bottom: 5px solid #0a2342;
+  box-shadow: 6px 6px 10px #383838;
+}
+.infoDiv {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  background-color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px #383838;
+}
+.gameItems {
+  width: 50%;
+}
+.gameStats {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemButton {
+  margin: 1vw;
+  box-shadow: 6px 6px 10px #0a2342;
+}
+
+@media (max-width: 767px) {
+  .gameItems {
+    font-size: medium;
+  }
+}
+
+
+//======= breakpoints
+$small:40rem;
+$tiny:22rem;
+
+@mixin small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin tiny {
+  @media (max-width: #{$tiny}) {
+    @content;
+  }
+}
+
+// use  @include small {}
+// or   @include tiny {}
+
+// reset
+*, *:before, *:after {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html, body {
+  width:100%;
+  height:100%;
+}
+body {
+  position:realtive;
+  font-family: 'Titillium Web', sans-serif;
+  background-color:#1E1E1E;
+  background-image:
+    linear-gradient(45deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.15) 50%, transparent 50%, transparent 100%),
+    linear-gradient(-45deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%, transparent 50%, transparent 100%),
+    radial-gradient(#282828, #1E1E1E);
+  background-size:4rem 4rem, 4rem 4rem, 100% 100%;
+  background-repeat:repeat, repeat, no-repeat;
+  background-position:50% 50%;
+  transition:background-size .3s;
+  @include small {background-size:3rem 3rem, 3rem 3rem, 100% 100%;}
+  @include tiny {background-size:2rem 2rem, 2rem 2rem, 100% 100%;}
+}
+
+// here starts the interesting stuff
+.stage {
+  width:100%;
+  max-width:30rem;
+  margin:0 auto;
+  height:100%;
+  perspective:300px; // for firefox
+  perspective:300; // for webkit
+  overflow:hidden;
+}
+
+.core2 {
+  position:relative;
+  margin:0 auto;
+  top:50%;
+  width:50%;
+  padding-bottom:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background-image:
+    radial-gradient(transparent 40%, white),
+    linear-gradient(rgba(white, .8), rgba(white, .8)),
+    radial-gradient(white 10%, transparent 50%);
+  background-size:120% 120%, 100% 100%, 60% 60%;
+  background-position:0 0, 50% 50%, 50% 50%;
+  background-repeat:no-repeat;
+  box-shadow:
+    5rem 5rem 8rem rgba(0,0,0,0.5),
+    0 0 5rem rgba(white, .8);
+}
+
+.core2,
+.trabant {transform-style: preserve-3d;}
+
+// each trabant is actually a long rectangle
+// only the :before elemenet is visible
+.trabant {
+  position:absolute;
+  top:50%;
+  left:-16%;
+  right:-16%;
+  margin-top:-5%;
+  padding-bottom:10%;
+  
+  &:before {
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:7.5%;
+    background-color:$yellow;
+    border-radius:50%;
+    box-shadow:
+      inset 5px 5px 10px rgba(white, .2),
+      inset -5px -5px 10px rgba(black, .2);
+  }
+}
+// this animation is used for the :before elements 
+// to keep them visible while their parents rotate
+@keyframes rotating {
+  0% {tansform:rotateY(0);}
+  100% {transform:rotateY(400grad);}
+}
+
+// one animation for each trabant 
+// with custom angle and timing 
+// + same timing for :before element
+@for $i from 1 through 5 {
+  .trabant:nth-child(#{$i}) {
+    $time:1.5 - ((random(30) - 30) / 10) * 1s;
+    $delay:$i* (-2s);
+    animation:rotating-#{$i} $time $delay linear infinite;
+    &:before {animation:rotating $time $delay linear infinite reverse;}
+  }
+  @keyframes rotating-#{$i} {
+    $angle:$i * 40grad;
+    0% {transform:rotateZ($angle) rotateY(0);}
+  100% {transform:rotateZ($angle) rotateY(400grad);}
+  }
+}
