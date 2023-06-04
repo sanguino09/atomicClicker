@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/img/atom.ico" />
+    <link
+      href="https://fonts.cdnfonts.com/css/goudy-old-style"
+      rel="stylesheet"
+    />
+    <title>Atomic Clicker</title>
+  </head>
+  <body>
+    <div class="titleDiv">
+      <div class="title">Atom Clicker</div>
+    </div>
+    <div class="gameDiv">
+      <div onclick="clickFunction()" class="gameScreen frame">
+        <div class="atom">
+          <div class="electron electron1"></div>
+          <div class="electron"></div>
+          <div class="electron"></div>
+          <div class="core neutron1"></div>
+          <div class="core neutron2"></div>
+          <div class="core neutron3"></div>
+          <div class="core neutron4"></div>
+          <div class="core neutron5"></div>
+        </div>
+      </div>
+      <div class="infoDiv">
+        <div class="gameItems">
+          <div class="itemButton multiplier">+1 neutron (500c)</div>
+          <div class="itemButton atoms">+1 electron (100c)</div>
+        </div>
+        <div class="gameStats">
+          <div class="clickNumberStat">
+            Clicks:
+            <div class="clickNumber">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
