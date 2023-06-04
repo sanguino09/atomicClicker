@@ -72,7 +72,6 @@ body {
 
 .electronsNumberStat {
   display: flex;
-  margin-right: 5vw;
 }
 
 .otherStats {
@@ -113,7 +112,7 @@ body {
     font-size: 0.8em;
   }
   .elementLetter {
-    line-height: 60em !important;
+    line-height: 50em !important;
   }
 }
 *, *:before, *:after {
@@ -204,10 +203,10 @@ body {
   }
 }
 #trabant:nth-child(1) {
-  animation: rotating-1 2.8s -2s linear infinite;
+  animation: rotating-1 2.3s -2s linear infinite;
 }
 #trabant:nth-child(1):before {
-  animation: rotating 2.8s -2s linear infinite reverse;
+  animation: rotating 2.3s -2s linear infinite reverse;
 }
 
 @keyframes rotating-1 {
@@ -219,10 +218,10 @@ body {
   }
 }
 #trabant:nth-child(2) {
-  animation: rotating-2 3s -4s linear infinite;
+  animation: rotating-2 2.2s -4s linear infinite;
 }
 #trabant:nth-child(2):before {
-  animation: rotating 3s -4s linear infinite reverse;
+  animation: rotating 2.2s -4s linear infinite reverse;
 }
 
 @keyframes rotating-2 {
@@ -234,10 +233,10 @@ body {
   }
 }
 #trabant:nth-child(3) {
-  animation: rotating-3 2.4s -6s linear infinite;
+  animation: rotating-3 3.1s -6s linear infinite;
 }
 #trabant:nth-child(3):before {
-  animation: rotating 2.4s -6s linear infinite reverse;
+  animation: rotating 3.1s -6s linear infinite reverse;
 }
 
 @keyframes rotating-3 {
@@ -249,10 +248,10 @@ body {
   }
 }
 #trabant:nth-child(4) {
-  animation: rotating-4 3.2s -8s linear infinite;
+  animation: rotating-4 3.6s -8s linear infinite;
 }
 #trabant:nth-child(4):before {
-  animation: rotating 3.2s -8s linear infinite reverse;
+  animation: rotating 3.6s -8s linear infinite reverse;
 }
 
 @keyframes rotating-4 {
@@ -264,10 +263,10 @@ body {
   }
 }
 #trabant:nth-child(5) {
-  animation: rotating-5 3.6s -10s linear infinite;
+  animation: rotating-5 1.8s -10s linear infinite;
 }
 #trabant:nth-child(5):before {
-  animation: rotating 3.6s -10s linear infinite reverse;
+  animation: rotating 1.8s -10s linear infinite reverse;
 }
 
 @keyframes rotating-5 {
@@ -279,10 +278,10 @@ body {
   }
 }
 #trabant:nth-child(6) {
-  animation: rotating-6 2.1s -12s linear infinite;
+  animation: rotating-6 4.1s -12s linear infinite;
 }
 #trabant:nth-child(6):before {
-  animation: rotating 2.1s -12s linear infinite reverse;
+  animation: rotating 4.1s -12s linear infinite reverse;
 }
 
 @keyframes rotating-6 {
@@ -309,10 +308,10 @@ body {
   }
 }
 #trabant:nth-child(8) {
-  animation: rotating-8 1.9s -16s linear infinite;
+  animation: rotating-8 2.8s -16s linear infinite;
 }
 #trabant:nth-child(8):before {
-  animation: rotating 1.9s -16s linear infinite reverse;
+  animation: rotating 2.8s -16s linear infinite reverse;
 }
 
 @keyframes rotating-8 {
@@ -324,10 +323,10 @@ body {
   }
 }
 #trabant:nth-child(9) {
-  animation: rotating-9 3.2s -18s linear infinite;
+  animation: rotating-9 3.3s -18s linear infinite;
 }
 #trabant:nth-child(9):before {
-  animation: rotating 3.2s -18s linear infinite reverse;
+  animation: rotating 3.3s -18s linear infinite reverse;
 }
 
 @keyframes rotating-9 {
@@ -339,10 +338,10 @@ body {
   }
 }
 #trabant:nth-child(10) {
-  animation: rotating-10 1.6s -20s linear infinite;
+  animation: rotating-10 2.9s -20s linear infinite;
 }
 #trabant:nth-child(10):before {
-  animation: rotating 1.6s -20s linear infinite reverse;
+  animation: rotating 2.9s -20s linear infinite reverse;
 }
 
 @keyframes rotating-10 {
