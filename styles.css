@@ -71,7 +71,15 @@ body {
   border-radius: 10px;
 }
 
-.atoms2 {
+.itemButton:hover {
+  cursor: pointer;
+}
+
+.gameDiv:hover {
+  cursor: crosshair;
+}
+
+.atoms2, .atoms3, .atoms4, .atoms5 {
   display: none;
 }
 
@@ -166,10 +174,10 @@ body {
   }
 }
 #trabant:nth-child(1) {
-  animation: rotating-1 2.4s -2s linear infinite;
+  animation: rotating-1 3s -2s linear infinite;
 }
 #trabant:nth-child(1):before {
-  animation: rotating 2.4s -2s linear infinite reverse;
+  animation: rotating 3s -2s linear infinite reverse;
 }
 
 @keyframes rotating-1 {
@@ -181,10 +189,10 @@ body {
   }
 }
 #trabant:nth-child(2) {
-  animation: rotating-2 2.9s -4s linear infinite;
+  animation: rotating-2 2.4s -4s linear infinite;
 }
 #trabant:nth-child(2):before {
-  animation: rotating 2.9s -4s linear infinite reverse;
+  animation: rotating 2.4s -4s linear infinite reverse;
 }
 
 @keyframes rotating-2 {
@@ -196,10 +204,10 @@ body {
   }
 }
 #trabant:nth-child(3) {
-  animation: rotating-3 2.3s -6s linear infinite;
+  animation: rotating-3 1.7s -6s linear infinite;
 }
 #trabant:nth-child(3):before {
-  animation: rotating 2.3s -6s linear infinite reverse;
+  animation: rotating 1.7s -6s linear infinite reverse;
 }
 
 @keyframes rotating-3 {
@@ -211,10 +219,10 @@ body {
   }
 }
 #trabant:nth-child(4) {
-  animation: rotating-4 4.3s -8s linear infinite;
+  animation: rotating-4 3.4s -8s linear infinite;
 }
 #trabant:nth-child(4):before {
-  animation: rotating 4.3s -8s linear infinite reverse;
+  animation: rotating 3.4s -8s linear infinite reverse;
 }
 
 @keyframes rotating-4 {
@@ -226,10 +234,10 @@ body {
   }
 }
 #trabant:nth-child(5) {
-  animation: rotating-5 1.7s -10s linear infinite;
+  animation: rotating-5 2s -10s linear infinite;
 }
 #trabant:nth-child(5):before {
-  animation: rotating 1.7s -10s linear infinite reverse;
+  animation: rotating 2s -10s linear infinite reverse;
 }
 
 @keyframes rotating-5 {

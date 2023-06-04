@@ -64,9 +64,15 @@ body {
 .itemButton {
   margin: 1vw;
   box-shadow: 6px 6px 10px #0a2342;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
-.atoms2{
+.itemButton:hover {
+  cursor: pointer;
+}
+.gameDiv:hover {
+  cursor: crosshair;
+}
+.atoms2, .atoms3, .atoms4, .atoms5{
   display: none ;
 }
 
