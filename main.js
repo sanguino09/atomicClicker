@@ -45,7 +45,7 @@ function addElectron2() {
 function addElectron3() {
   if (click >= 300) {
     electron3.removeAttribute("hidden");
-    click = click - 100;
+    click = click - 300;
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 3");
     addElectron3Button.style.display = "none";
@@ -56,7 +56,7 @@ function addElectron3() {
 function addElectron4() {
   if (click >= 500) {
     electron4.removeAttribute("hidden");
-    click = click - 100;
+    click = click - 500;
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 4");
     addElectron4Button.style.display = "none";
@@ -68,7 +68,7 @@ function addElectron4() {
 function addElectron5() {
   if (click >= 1000) {
     electron5.removeAttribute("hidden");
-    click = click - 100;
+    click = click - 1000;
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 5");
     addElectron5Button.style.display = "none";
@@ -79,7 +79,7 @@ function addElectron5() {
 function addElectron6() {
   if (click >= 2000) {
     electron6.removeAttribute("hidden");
-    click = click - 100;
+    click = click - 2000;
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 6");
     addElectron6Button.style.display = "none";
