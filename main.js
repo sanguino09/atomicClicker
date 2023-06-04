@@ -1,6 +1,6 @@
 let click = 0;
 let clickValue = 1;
-let elementLetter = document.querySelectorAll(".elementLetter");
+let elementLetter = document.querySelector(".elementLetter");
 let electron1 = document.querySelector(".electron1");
 let electron2 = document.querySelector(".electron2");
 let electron3 = document.querySelector(".electron4");
