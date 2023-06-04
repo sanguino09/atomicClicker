@@ -1,11 +1,14 @@
 let click = 0;
+let electrons = 0;
 let clickValue = 1;
 let elementLetter = document.querySelector(".elementLetter");
+let core = document.getElementById("core");
 let electron1 = document.querySelector(".electron1");
 let electron2 = document.querySelector(".electron2");
-let electron3 = document.querySelector(".electron4");
+let electron3 = document.querySelector(".electron3");
 let electron4 = document.querySelector(".electron4");
 let electron5 = document.querySelector(".electron5");
+let electron6 = document.querySelector(".electron6");
 let addElectron1Button = document.querySelector(".atoms1");
 let addElectron2Button = document.querySelector(".atoms2");
 let addElectron3Button = document.querySelector(".atoms3");
@@ -23,18 +26,24 @@ function addElectron1() {
   if (click >= 20) {
     electron1.removeAttribute("hidden");
     click = click - 20;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
+    document.getElementById("atomName").innerHTML = "Hydrogen";
     console.log("add electron 1");
     addElectron1Button.style.display = "none";
     addElectron2Button.style.display = "block";
     clickValue += 1;
     elementLetter.innerText = "Hydrogen";
+    core.setAttribute("style", "background-color:blue;");
   }
 }
 function addElectron2() {
-  if (click >= 100) {
+  if (click >= 50) {
     electron2.removeAttribute("hidden");
-    click = click - 100;
+    click = click - 50;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 2");
     addElectron2Button.style.display = "none";
@@ -43,9 +52,11 @@ function addElectron2() {
   }
 }
 function addElectron3() {
-  if (click >= 300) {
+  if (click >= 100) {
     electron3.removeAttribute("hidden");
-    click = click - 300;
+    click = click - 100;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 3");
     addElectron3Button.style.display = "none";
@@ -54,21 +65,27 @@ function addElectron3() {
   }
 }
 function addElectron4() {
-  if (click >= 500) {
+  if (click >= 150) {
     electron4.removeAttribute("hidden");
-    click = click - 500;
+    click = click - 150;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
+    document.getElementById("atomName").innerHTML = "Helium";
     console.log("add electron 4");
     addElectron4Button.style.display = "none";
     addElectron5Button.style.display = "block";
     clickValue += 1;
     elementLetter.innerText = "Helium";
+    core.setAttribute("style", "background-color:orange;");
   }
 }
 function addElectron5() {
   if (click >= 1000) {
     electron5.removeAttribute("hidden");
     click = click - 1000;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 5");
     addElectron5Button.style.display = "none";
@@ -80,6 +97,8 @@ function addElectron6() {
   if (click >= 2000) {
     electron6.removeAttribute("hidden");
     click = click - 2000;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 6");
     addElectron6Button.style.display = "none";

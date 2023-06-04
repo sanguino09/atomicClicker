@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="img/atom.ico" />
+
     <link
       href="https://fonts.cdnfonts.com/css/goudy-old-style"
       rel="stylesheet"
     />
-    <title>Periodic Evolution</title>
+    <title>Atomic Clicker</title>
   </head>
   <body>
     <div class="elementLetter">Nucleus</div>
     <div class="titleDiv">
-      <div class="title">Periodic Evolution</div>
+      <div class="title">Atomic Clicker</div>
     </div>
 
     <div class="gameDiv">
       <div onclick="clickFunction()" class="stage">
-        <div class="core2">
+        <div id="core">
           <span hidden id="trabant" class="electron1"></span>
           <span hidden id="trabant" class="electron2"></span>
           <span hidden id="trabant" class="electron3"></span>
@@ -32,35 +33,46 @@
       <div class="infoDiv">
         <div class="gameItems">
           <div onclick="addElectron6()" class="itemButton atoms6">
-            +1 electron (2000c)
+            +1 electron (2000q)
           </div>
           <div onclick="addElectron5()" class="itemButton atoms5">
-            +1 electron (1000c)
+            +1 electron (1000q)
           </div>
           <div onclick="addElectron4()" class="itemButton atoms4">
-            +1 electron (500c)
+            +1 electron (150q)
           </div>
           <div onclick="addElectron3()" class="itemButton atoms3">
-            +1 electron (300c)
+            +1 electron (100q)
           </div>
           <div onclick="addElectron2()" class="itemButton atoms2">
-            +1 electron (100c)
+            +1 electron (50q)
           </div>
           <div onclick="addElectron1()" class="itemButton atoms1">
-            +1 electron (20c)
+            +1 electron (20q)
           </div>
           <div onclick="autoClick()" class="itemButton auto">
-            Auto Click <span class="electronPrice">(5000000c)</span>
+            Auto Click <span class="electronPrice">(5000000q)</span>
           </div>
         </div>
         <div class="gameStats">
           <div class="clickNumberStat">
-            Clicks:
-            <div id="clickNumber">0</div>
+            <i class="fa-solid fa-arrow-pointer"></i>&nbsp;<div id="clickNumber">0</div>&nbsp;Quarks
+            
+          </div>
+          <div class="otherStats">
+            <div class="electronsNumberStat">
+              <i class="fa-solid fa-tablets"></i>&nbsp;<div id="electronsNumber">0</div>&nbsp;Electrons
+              
+            </div>
+            <div class="atomStat"><i class="fa-solid fa-atom"></i>&nbsp;<div id="atomName">None</div></div>
           </div>
         </div>
       </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/fec28134d0.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js"></script>
   </body>
 </html>

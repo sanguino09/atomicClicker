@@ -60,6 +60,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.clickNumberStat{
+  display: flex;
+}
+.electronsNumberStat{
+  display: flex;
+  margin-right:5vw;
+}
+.otherStats{
+  display: flex;
+}
+.atomStat{
+  display: flex;
 }
 .itemButton {
   margin: 1vw;
@@ -134,7 +148,7 @@ body {
   overflow:hidden;
 }
 
-.core2 {
+#core {
   position:relative;
   margin:0 auto;
   top:50%;
@@ -152,10 +166,9 @@ body {
   box-shadow:
     5rem 5rem 8rem rgba(0,0,0,0.5),
     0 0 5rem rgba(white, .8);
+    transform-style: preserve-3d;
 }
 
-.core2 {
-  transform-style: preserve-3d;}
 
 // each trabant is actually a long rectangle
 // only the :before elemenet is visible
