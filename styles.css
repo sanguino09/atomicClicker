@@ -71,11 +71,6 @@ body {
   border-radius: 10px;
 }
 
-@media (max-width: 767px) {
-  .gameItems {
-    font-size: medium;
-  }
-}
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -167,10 +162,10 @@ body {
   }
 }
 #trabant:nth-child(1) {
-  animation: rotating-1 3.6s -2s linear infinite;
+  animation: rotating-1 2.8s -2s linear infinite;
 }
 #trabant:nth-child(1):before {
-  animation: rotating 3.6s -2s linear infinite reverse;
+  animation: rotating 2.8s -2s linear infinite reverse;
 }
 
 @keyframes rotating-1 {
