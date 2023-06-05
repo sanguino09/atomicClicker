@@ -9,19 +9,22 @@ let electron3 = document.querySelector(".electron3");
 let electron4 = document.querySelector(".electron4");
 let electron5 = document.querySelector(".electron5");
 let electron6 = document.querySelector(".electron6");
+let electron7 = document.querySelector(".electron7");
+let electron8 = document.querySelector(".electron8");
 let addElectron1Button = document.querySelector(".atoms1");
 let addElectron2Button = document.querySelector(".atoms2");
 let addElectron3Button = document.querySelector(".atoms3");
 let addElectron4Button = document.querySelector(".atoms4");
 let addElectron5Button = document.querySelector(".atoms5");
 let addElectron6Button = document.querySelector(".atoms6");
+let addElectron7Button = document.querySelector(".atoms7");
+let addElectron8Button = document.querySelector(".atoms8");
 
 function clickFunction() {
   click += clickValue;
   console.log(click);
   document.getElementById("clickNumber").innerHTML = click.toString();
 }
-
 function addElectron1() {
   if (click >= 20) {
     electron1.removeAttribute("hidden");
@@ -81,9 +84,9 @@ function addElectron4() {
   }
 }
 function addElectron5() {
-  if (click >= 1000) {
+  if (click >= 200) {
     electron5.removeAttribute("hidden");
-    click = click - 1000;
+    click = click - 200;
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
@@ -94,15 +97,44 @@ function addElectron5() {
   }
 }
 function addElectron6() {
-  if (click >= 2000) {
+  if (click >= 300) {
     electron6.removeAttribute("hidden");
-    click = click - 2000;
+    click = click - 300;
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
     console.log("add electron 6");
     addElectron6Button.style.display = "none";
     addElectron7Button.style.display = "block";
+    clickValue += 1;
+  }
+}
+function addElectron7() {
+  if (click >= 500) {
+    electron7.removeAttribute("hidden");
+    click = click - 500;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
+    document.getElementById("clickNumber").innerHTML = click.toString();
+    document.getElementById("atomName").innerHTML = "Lithium";
+    console.log("add electron 7");
+    addElectron7Button.style.display = "none";
+    addElectron8Button.style.display = "block";
+    clickValue += 1;
+    elementLetter.innerText = "Lithium";
+    core.setAttribute("style", "background-color:green;");
+  }
+}
+function addElectron8() {
+  if (click >= 1000) {
+    electron7.removeAttribute("hidden");
+    click = click - 1000;
+    electrons += 1;
+    document.getElementById("electronsNumber").innerHTML = electrons.toString();
+    document.getElementById("clickNumber").innerHTML = click.toString();
+    console.log("add electron 8");
+    addElectron8Button.style.display = "none";
+    addElectron9Button.style.display = "block";
     clickValue += 1;
   }
 }
