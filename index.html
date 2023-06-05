@@ -34,12 +34,23 @@
         atomic journey)
       </div>
     </div>
-    <div class="elementLetter">Nucleus</div>
+
     <div class="titleDiv">
-      <div class="title">Atomic Clicker</div>
+      <div class="titleBar">
+        <button onclick="goLeft()" class="arrowLeft">
+          <i class="fa-solid fa-arrow-left fa-2xl"></i>
+        </button>
+        &nbsp; &nbsp;
+        <div id="clickScreen">Atomic Clicker</div>
+        &nbsp; &nbsp;
+        <button onclick="goRight()" class="arrowRight">
+          <i class="fa-solid fa-arrow-right fa-2xl"></i>
+        </button>
+      </div>
     </div>
 
     <div class="gameDiv">
+      <div class="elementLetter">Nucleus</div>
       <div onclick="clickFunction()" class="stage">
         <div id="core">
           <span hidden id="trabant" class="electron1"></span>

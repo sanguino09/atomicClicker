@@ -1,3 +1,4 @@
+
 /*-------------Remove loader-----------------------*/
 let loaderbg = document.querySelector(".loaderbg");
 
@@ -10,6 +11,41 @@ let tutorialScreen = document.querySelector(".tutorialScreen");
 
 function skipTutorial() {
   tutorialScreen.style.display = "none";
+}
+
+/*-----------------Menu Bar-----------------*/
+let clickerScreen = document.getElementById("clickScreen");
+let gameDiv = document.querySelector(".gameDiv");
+let arrowLeft = document.querySelector(".arrowLeft");
+let arrowRight = document.querySelector(".arrowRight");
+
+function goRight() {
+  if (clickerScreen.innerHTML == "Molecule Shaft") {
+    clickerScreen.innerHTML = "Atomic Clicker";
+    arrowLeft.style.display = "block";
+    gameDiv.style.display = "flex";
+    console.log("mol->atom");
+  }
+  else if (clickerScreen.innerHTML == "Atomic Clicker") {
+    clickerScreen.innerHTML = "Quark Shop";
+    arrowRight.style.display = "none";
+    gameDiv.style.display = "none";
+    console.log("atom->shop");
+  }
+}
+function goLeft() {
+  if (clickerScreen.innerHTML == "Atomic Clicker") {
+    clickerScreen.innerHTML = "Molecule Shaft";
+    arrowLeft.style.display = "none";
+    gameDiv.style.display = "none";
+    console.log("atom->mol");
+  }
+  else if (clickerScreen.innerHTML == "Quark Shop") {
+    clickerScreen.innerHTML = "Atomic Clicker";
+    arrowRight.style.display = "block";
+    gameDiv.style.display = "flex";
+    console.log("shop->atom");
+  }
 }
 
 /*-----------------Atomic CLicker-----------------------*/
@@ -39,6 +75,7 @@ function clickFunction() {
   click += clickValue;
   console.log(click);
   document.getElementById("clickNumber").innerHTML = click.toString();
+  document.body.style.cursor ="pointer";
 }
 function addElectron1() {
   if (click >= 20) {
