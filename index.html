@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="loader.css" />
     <link rel="icon" type="image/x-icon" href="img/atom.ico" />
 
     <link
@@ -14,6 +15,25 @@
     <title>Atomic Clicker</title>
   </head>
   <body>
+    <div class="loaderbg">
+      <div class="loader" id="loader1"></div>
+      <div class="loader" id="loader2"></div>
+      <div class="loader" id="loader3"></div>
+      <p id="loadertxt">
+        I'm loading...<br /><span style="font-size: 40px">Atomic Clicker</span>
+      </p>
+    </div>
+    <div onclick="skipTutorial()" class="tutorialScreen">
+      <div class="welcome">
+        Welcome to Atomic Clicker! <br /><br />Your mission is simple: click on
+        atoms to collect electrons and unlock new elements. Each atom offers
+        unique boosts, and upgrading electrons leads to more clicks.<br /><br />
+        Explore various tabs within the game, including the main clicker, the
+        "molecules" tab for combining atoms and gaining power-ups, and the
+        "Shop" tab on the right. <br /><br />(Click anywhere to embark on your
+        atomic journey)
+      </div>
+    </div>
     <div class="elementLetter">Nucleus</div>
     <div class="titleDiv">
       <div class="title">Atomic Clicker</div>

@@ -1,0 +1,99 @@
+.loaderbg {
+    position: absolute;
+    z-index:20;
+    width: 100%;
+    height: 100%;
+    background: #292b37;
+  }
+  
+  .loader {
+    position: fixed;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 100px);
+    border-radius: 50%;
+    border-top: 2px solid transparent;
+    border-right: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: 1px solid white;
+    width: 200px;
+    height: 200px;
+  }
+  
+  #loadertxt {
+    position: fixed;
+    top: calc(50vh + 120px);
+    left: calc(50vw - 80px);
+    width: 200px;
+    font-size: 17px;
+    text-align: center;
+    color: white;
+  }
+  
+  #loader1 {
+    -webkit-animation: spin1 1s linear infinite;
+    animation: spin1 1s linear infinite;
+  }
+  
+  #loader2 {
+    -webkit-animation: spin2 1s linear infinite;
+    animation: spin2 1s linear infinite;
+  }
+  
+  #loader3 {
+    -webkit-animation: spin3 1s linear infinite;
+    animation: spin3 1s linear infinite;
+  }
+  
+  @-webkit-keyframes spin1 {
+    0% {
+      transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(45deg) rotateY(45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes spin1 {
+    0% {
+      transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(45deg) rotateY(45deg) rotateZ(360deg);
+    }
+  }
+  
+  @-webkit-keyframes spin2 {
+    0% {
+      transform: rotateX(45deg) rotateY(135deg) rotateZ(120deg);
+    }
+    100% {
+      transform: rotateX(45deg) rotateY(135deg) rotateZ(480deg);
+    }
+  }
+  
+  @keyframes spin2 {
+    0% {
+      transform: rotateX(45deg) rotateY(135deg) rotateZ(120deg);
+    }
+    100% {
+      transform: rotateX(45deg) rotateY(135deg) rotateZ(480deg);
+    }
+  }
+  
+  @-webkit-keyframes spin3 {
+    0% {
+      transform: rotateX(0deg) rotateY(45deg) rotateZ(240deg);
+    }
+    100% {
+      transform: rotateX(0deg) rotateY(45deg) rotateZ(600deg);
+    }
+  }
+  
+  @keyframes spin3 {
+    0% {
+      transform: rotateX(70deg) rotateY(0deg) rotateZ(240deg);
+    }
+    100% {
+      transform: rotateX(70deg) rotateY(0deg) rotateZ(600deg);
+    }
+  }

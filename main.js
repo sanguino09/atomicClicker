@@ -1,3 +1,18 @@
+/*-------------Remove loader-----------------------*/
+let loaderbg = document.querySelector(".loaderbg");
+
+setTimeout(function () {
+  loaderbg.style.display = "none";
+}, 3000);
+
+/*-------------Tutorial Screen-----------------------*/
+let tutorialScreen = document.querySelector(".tutorialScreen");
+
+function skipTutorial() {
+  tutorialScreen.style.display = "none";
+}
+
+/*-----------------Atomic CLicker-----------------------*/
 let click = 0;
 let electrons = 0;
 let clickValue = 1;
