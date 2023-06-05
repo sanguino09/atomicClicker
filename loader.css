@@ -8,7 +8,7 @@
   
   .loader {
     position: fixed;
-    top: calc(50vh - 100px);
+    top: calc(20vh);
     left: calc(50vw - 100px);
     border-radius: 50%;
     border-top: 2px solid transparent;
@@ -21,7 +21,7 @@
   
   #loadertxt {
     position: fixed;
-    top: calc(50vh + 120px);
+    top: calc(55vh);
     left: calc(50vw - 80px);
     width: 200px;
     font-size: 17px;
