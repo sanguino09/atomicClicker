@@ -1,3 +1,8 @@
+window.addEventListener("DOMContentLoaded", (event) => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+});
 
 /*-------------Remove loader-----------------------*/
 let loaderbg = document.querySelector(".loaderbg");
@@ -25,8 +30,7 @@ function goRight() {
     arrowLeft.style.display = "block";
     gameDiv.style.display = "flex";
     console.log("mol->atom");
-  }
-  else if (clickerScreen.innerHTML == "Atomic Clicker") {
+  } else if (clickerScreen.innerHTML == "Atomic Clicker") {
     clickerScreen.innerHTML = "Quark Shop";
     arrowRight.style.display = "none";
     gameDiv.style.display = "none";
@@ -39,8 +43,7 @@ function goLeft() {
     arrowLeft.style.display = "none";
     gameDiv.style.display = "none";
     console.log("atom->mol");
-  }
-  else if (clickerScreen.innerHTML == "Quark Shop") {
+  } else if (clickerScreen.innerHTML == "Quark Shop") {
     clickerScreen.innerHTML = "Atomic Clicker";
     arrowRight.style.display = "block";
     gameDiv.style.display = "flex";
@@ -53,7 +56,9 @@ let click = 0;
 let electrons = 0;
 let clickValue = 1;
 let elementLetter = document.querySelector(".elementLetter");
+let oneUp = document.querySelector(".oneUp");
 let core = document.getElementById("core");
+let stage = document.querySelector(".stage");
 let electron1 = document.querySelector(".electron1");
 let electron2 = document.querySelector(".electron2");
 let electron3 = document.querySelector(".electron3");
@@ -75,8 +80,20 @@ function clickFunction() {
   click += clickValue;
   console.log(click);
   document.getElementById("clickNumber").innerHTML = click.toString();
-  document.body.style.cursor ="pointer";
+  numbersFlying();
+  oneUp.classList.add('pulsate-css');
+  setTimeout(function () {
+    oneUp.classList.remove('pulsate-css');
+  }, 100);
 }
+
+function numbersFlying() {
+  /*stage.style.cursor = "url('img/oneUp.png'), auto";*/
+  setTimeout(function () {
+    stage.style.cursor = "crosshair";
+  }, 200);
+}
+
 function addElectron1() {
   if (click >= 20) {
     electron1.removeAttribute("hidden");
@@ -90,13 +107,16 @@ function addElectron1() {
     addElectron2Button.style.display = "block";
     clickValue += 1;
     elementLetter.innerText = "Hydrogen";
+    oneUp.innerText = "+2q";
     core.setAttribute("style", "background-color:blue;");
+    hydrogenLogo.style.display = "block";
   }
 }
 function addElectron2() {
   if (click >= 50) {
     electron2.removeAttribute("hidden");
     click = click - 50;
+    oneUp.innerText = "+3q";
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
@@ -110,6 +130,7 @@ function addElectron3() {
   if (click >= 100) {
     electron3.removeAttribute("hidden");
     click = click - 100;
+    oneUp.innerText = "+4q";
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
@@ -123,6 +144,7 @@ function addElectron4() {
   if (click >= 150) {
     electron4.removeAttribute("hidden");
     click = click - 150;
+    oneUp.innerText = "+5q";
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
@@ -139,6 +161,7 @@ function addElectron5() {
   if (click >= 200) {
     electron5.removeAttribute("hidden");
     click = click - 200;
+    oneUp.innerText = "+6q";
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
@@ -152,6 +175,7 @@ function addElectron6() {
   if (click >= 300) {
     electron6.removeAttribute("hidden");
     click = click - 300;
+    oneUp.innerText = "+7q";
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
@@ -165,6 +189,7 @@ function addElectron7() {
   if (click >= 500) {
     electron7.removeAttribute("hidden");
     click = click - 500;
+    oneUp.innerText = "+8q";
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
@@ -181,6 +206,7 @@ function addElectron8() {
   if (click >= 1000) {
     electron7.removeAttribute("hidden");
     click = click - 1000;
+    oneUp.innerText = "+9q";
     electrons += 1;
     document.getElementById("electronsNumber").innerHTML = electrons.toString();
     document.getElementById("clickNumber").innerHTML = click.toString();
