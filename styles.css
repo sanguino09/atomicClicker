@@ -94,16 +94,6 @@ body {
   display: flex;
 }
 
-.itemButton {
-  margin: 1vw;
-  box-shadow: 6px 6px 10px #0a2342;
-  border-radius: 10px;
-}
-
-.itemButton:hover {
-  cursor: pointer;
-}
-
 .gameDiv:hover {
   cursor: crosshair;
 }
@@ -422,12 +412,17 @@ body {
 }
 /*-------------------------------------------------------------------------*/
 /*------Buttons--------*/
+.itemButton {
+  margin: 1vw;
+  box-shadow: 6px 6px 10px #0a2342;
+  border-radius: 10px;
+}
 .itemButton:hover {
-  background-color: #FFF4E6 ;
+  transform: translateY(4px);
+  cursor: pointer;
 }
 .itemButton:active {
-  background-color: #FFF4E6;
-  box-shadow: 0 5px rgba(10,10,10,0.7);
+  box-shadow: inset 3px 3px 5px #0a2342;
   transform: translateY(4px);
 }
 
