@@ -1,5 +1,4 @@
 $yellow: #ff9b00;
-
 @import url("https://fonts.cdnfonts.com/css/goudy-old-style");
 html,
 body {
@@ -96,16 +95,6 @@ body {
   display: flex;
 }
 
-.itemButton {
-  margin: 1vw;
-  box-shadow: 6px 6px 10px #0a2342;
-  border-radius: 10px;
-}
-
-.itemButton:hover {
-  cursor: pointer;
-}
-
 .gameDiv:hover {
   cursor: crosshair;
 }
@@ -165,7 +154,7 @@ body {
   width: 100%;
   height: 100%;
 }
-
+/*------------------====THE ATOM=====------------------------------*/
 body {
   position: relative;
   font-family: "Titillium Web", sans-serif;
@@ -190,6 +179,7 @@ body {
   background-position: 50% 50%;
   transition: background-size 0.3s;
 }
+
 @media (max-width: 40rem) {
   body {
     background-size: 3rem 3rem, 3rem 3rem, 100% 100%;
@@ -200,7 +190,6 @@ body {
     background-size: 2rem 2rem, 2rem 2rem, 100% 100%;
   }
 }
-
 .stage {
   width: 100%;
   max-width: 30rem;
@@ -240,6 +229,7 @@ body {
   transform-style: preserve-3d;
   opacity: 1 !important;
 }
+
 #trabant:before {
   content: "";
   position: absolute;
@@ -264,6 +254,7 @@ body {
 #trabant:nth-child(1) {
   animation: rotating-1 1.9s -2s linear infinite;
 }
+
 #trabant:nth-child(1):before {
   animation: rotating 1.9s -2s linear infinite reverse;
 }
@@ -279,6 +270,7 @@ body {
 #trabant:nth-child(2) {
   animation: rotating-2 2.6s -4s linear infinite;
 }
+
 #trabant:nth-child(2):before {
   animation: rotating 2.6s -4s linear infinite reverse;
 }
@@ -294,6 +286,7 @@ body {
 #trabant:nth-child(3) {
   animation: rotating-3 3.4s -6s linear infinite;
 }
+
 #trabant:nth-child(3):before {
   animation: rotating 3.4s -6s linear infinite reverse;
 }
@@ -309,6 +302,7 @@ body {
 #trabant:nth-child(4) {
   animation: rotating-4 2.8s -8s linear infinite;
 }
+
 #trabant:nth-child(4):before {
   animation: rotating 2.8s -8s linear infinite reverse;
 }
@@ -324,6 +318,7 @@ body {
 #trabant:nth-child(5) {
   animation: rotating-5 2.8s -10s linear infinite;
 }
+
 #trabant:nth-child(5):before {
   animation: rotating 2.8s -10s linear infinite reverse;
 }
@@ -339,6 +334,7 @@ body {
 #trabant:nth-child(6) {
   animation: rotating-6 4.1s -12s linear infinite;
 }
+
 #trabant:nth-child(6):before {
   animation: rotating 4.1s -12s linear infinite reverse;
 }
@@ -354,6 +350,7 @@ body {
 #trabant:nth-child(7) {
   animation: rotating-7 3.5s -14s linear infinite;
 }
+
 #trabant:nth-child(7):before {
   animation: rotating 3.5s -14s linear infinite reverse;
 }
@@ -369,6 +366,7 @@ body {
 #trabant:nth-child(8) {
   animation: rotating-8 1.9s -16s linear infinite;
 }
+
 #trabant:nth-child(8):before {
   animation: rotating 1.9s -16s linear infinite reverse;
 }
@@ -384,6 +382,7 @@ body {
 #trabant:nth-child(9) {
   animation: rotating-9 2.1s -18s linear infinite;
 }
+
 #trabant:nth-child(9):before {
   animation: rotating 2.1s -18s linear infinite reverse;
 }
@@ -399,6 +398,7 @@ body {
 #trabant:nth-child(10) {
   animation: rotating-10 1.6s -20s linear infinite;
 }
+
 #trabant:nth-child(10):before {
   animation: rotating 1.6s -20s linear infinite reverse;
 }
@@ -411,6 +411,22 @@ body {
     transform: rotateZ(400grad) rotateY(400grad);
   }
 }
+/*-------------------------------------------------------------------------*/
+/*------Buttons--------*/
+.itemButton {
+  margin: 1vw;
+  box-shadow: 6px 6px 10px #0a2342;
+  border-radius: 10px;
+}
+.itemButton:hover {
+  transform: translateY(4px);
+  cursor: pointer;
+}
+.itemButton:active {
+  box-shadow: inset 3px 3px 5px #0a2342;
+  transform: translateY(4px);
+}
+
 /*-----Element Letter---------*/
 .elementLetter {
   position: absolute;
@@ -463,14 +479,14 @@ button {
 
 .fa-2xl {
   color: white;
-} /*# sourceMappingURL=styles.css.map */
-
+}
 /*----------nucleus animated--------*/
 .pulsate-css {
   animation: pulsate 0.5s linear;
   animation-iteration-count: infinite;
   opacity: 0;
 }
+
 @keyframes pulsate {
   0% {
     -webkit-transform: scale(0.1, 0.1);
@@ -483,4 +499,4 @@ button {
     -webkit-transform: scale(1.2, 1.2);
     opacity: 0;
   }
-}
+} /*# sourceMappingURL=styles.css.map */
