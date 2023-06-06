@@ -17,6 +17,12 @@ let tutorialScreen = document.querySelector(".tutorialScreen");
 function skipTutorial() {
   tutorialScreen.style.display = "none";
 }
+/*-------------Skip New Element-----------------------*/
+let elementCardDiv = document.querySelector(".elementCardDiv");
+
+function skipCard() {
+  elementCardDiv.style.display = "none";
+}
 
 /*-----------------Menu Bar-----------------*/
 let clickerScreen = document.getElementById("clickScreen");
@@ -80,19 +86,12 @@ function clickFunction() {
   click += clickValue;
   console.log(click);
   document.getElementById("clickNumber").innerHTML = click.toString();
-  numbersFlying();
   oneUp.classList.add('pulsate-css');
   setTimeout(function () {
     oneUp.classList.remove('pulsate-css');
   }, 100);
 }
 
-function numbersFlying() {
-  /*stage.style.cursor = "url('img/oneUp.png'), auto";*/
-  setTimeout(function () {
-    stage.style.cursor = "crosshair";
-  }, 200);
-}
 
 function addElectron1() {
   if (click >= 20) {
@@ -109,7 +108,7 @@ function addElectron1() {
     elementLetter.innerText = "Hydrogen";
     oneUp.innerText = "+2q";
     core.setAttribute("style", "background-color:blue;");
-    hydrogenLogo.style.display = "block";
+    elementCardDiv.style.display ="block";
   }
 }
 function addElectron2() {
@@ -226,3 +225,7 @@ function autoClick() {
   }
 }
 */
+var confettiElement = document.getElementById('my-canvas');
+var confettiSettings = { target: confettiElement };
+var confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();
