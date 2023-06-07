@@ -37,7 +37,7 @@ body {
 
 @media (min-width: 767px) {
   .infoDiv {
-    width: 55vw !important;
+    width: 45vw !important;
   }
 }
 .gameDiv {
@@ -120,6 +120,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .moleculeDiv,
+  .storeDiv {
+    display: none;
+  }
   .elementCard {
     width: 50vw !important;
     height: 40vh !important;
@@ -444,7 +448,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   background: rgba(255, 255, 255, 0.9);
   color: #383838;
   display: flex;
@@ -519,4 +523,61 @@ button {
 
 #my-canvas.active {
   visibility: hidden;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*------MoleculeShaft & QuarkStore---------*/
+.moleculeDiv,
+.storeDiv {
+  top: 1vh;
+  z-index: 25;
+  position: absolute;
+  width: 25vw;
+  height: 100vh;
+  background-color: rgba(240, 248, 255, 0.3);
+  box-shadow: rgba(240, 248, 255, 0.7) 0px 5px 15px;
+  border-radius: 20px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moleculeDiv {
+  left: 0;
+}
+
+.storeDiv {
+  right: 0;
+}
+
+.itemMolecule, .itemStore {
+  box-shadow: 6px 6px 10px #383838;
+  border-radius: 20px;
+  width: 90%;
+  height: 10vh;
+  margin-top: 5vh;
+  background-color: rgba(240, 248, 255, 0.4) !important;
+  color: black;
+}
+
+.itemMolecule:hover {
+  transform: translateY(4px);
+  cursor: pointer;
+}
+
+.itemMolecule:active {
+  box-shadow: inset 3px 3px 5px #0a2342;
+  transform: translateY(4px);
+}
+
+.itemStore:hover {
+  transform: translateY(4px);
+  cursor: pointer;
+}
+
+.itemStore:active {
+  box-shadow: inset 3px 3px 5px #0a2342;
+  transform: translateY(4px);
+}
+
+/*---------------------------------------------*//*# sourceMappingURL=styles.css.map */
